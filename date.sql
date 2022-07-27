@@ -20,7 +20,7 @@ WHERE birth_date < now() - interval '61 years' -- 61 years before the current da
 */
 
 SELECT count(emp_no) FROM employees
-where EXTRACT (MONTH FROM hire_date) = 2;
+WHERE EXTRACT (MONTH FROM hire_date) = 2;
 
 /*
 * DB: Employees
