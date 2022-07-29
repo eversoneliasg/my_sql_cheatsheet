@@ -20,7 +20,8 @@ SELECT
     from_date,
     (SELECT title FROM titles AS t
     -- referencing outside = correlated subquery
-    WHERE t.emp_no = s.emp_no AND t.from_date = s.from_date)
+    WHERE t.emp_no = s.emp_no
+    AND (t.from_date = s.from_date + INTERVAL '2 days' OR t.from_date = s.from_date))
 FROM salaries AS s
 ORDER BY emp_no;
 
