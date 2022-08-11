@@ -12,4 +12,4 @@ GROUP BY
  ORDER BY
     EXTRACT (YEAR FROM orderdate),
     EXTRACT (MONTH FROM orderdate),
-        EXTRACT (DAY FROM orderdate)
+    EXTRACT (DAY FROM orderdate)
